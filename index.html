@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norivawear | Custom Apparel & Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">NORIVA</span><span class="logo-highlight">WEAR</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#custom">Custom</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+                <button class="menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" onclick="toggleMobileMenu()">Home</a>
+        <a href="#shop" onclick="toggleMobileMenu()">Shop</a>
+        <a href="#custom" onclick="toggleMobileMenu()">Custom</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">🔥 New Collection Dropped</div>
+            <h1 class="hero-title">
+                Wear Your <br>
+                <span class="gradient-text">Own Story</span>
+            </h1>
+            <p class="hero-desc">
+                Premium custom T-shirts designed by you. Express yourself with Norivawear's exclusive streetwear collection.
+            </p>
+            <div class="hero-btns">
+                <a href="#shop" class="btn btn-primary">Shop Now</a>
+                <a href="#custom" class="btn btn-outline">Custom Design</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">5K+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">100+</span>
+                    <span class="stat-label">Designs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">4.9</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop" alt="Streetwear Model" class="main-img">
+            <div class="img-glow"></div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trending <span class="gradient-text">Drops</span></h2>
+                <p class="section-subtitle">Handpicked styles for the season</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="tag">New</span>
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" alt="T-Shirt">
+                        <div class="product-overlay">
+                            <button class="quick-add" onclick="addToCart('Oversized Classic Tee', 34.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Oversized Classic</h3>
+                        <p class="product-desc">Heavyweight Cotton</p>
+                        <div class="product-price">
+                            <span class="price">$34.99</span>
+                            <div class="colors">
+                                <span class="color-dot black"></span>
+                                <span class="color-dot white"></span>
+                                <span class="color-dot gray"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be9a?q=80&w=800&auto=format&fit=crop" alt="T-Shirt">
+                        <div class="product-overlay">
+                            <button class="quick-add" onclick="addToCart('Urban Street Tee', 29.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Urban Street Tee</h3>
+                        <p class="product-desc">100% Organic Cotton</p>
+                        <div class="product-price">
+                            <span class="price">$29.99</span>
+                            <div class="colors">
+                                <span class="color-dot white"></span>
+                                <span class="color-dot blue"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="tag hot">Hot</span>
+                        <img src="https://images.unsplash.com/photo-1503341455253-b2e72333dbdb?q=80&w=800&auto=format&fit=crop" alt="T-Shirt">
+                        <div class="product-overlay">
+                            <button class="quick-add" onclick="addToCart('Graphic Vibe Tee', 39.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Graphic Vibe</h3>
+                        <p class="product-desc">Premium Print</p>
+                        <div class="product-price">
+                            <span class="price">$39.99</span>
+                            <div class="colors">
+                                <span class="color-dot black"></span>
+                                <span class="color-dot white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800&auto=format&fit=crop" alt="T-Shirt">
+                        <div class="product-overlay">
+                            <button class="quick-add" onclick="addToCart('Essential Crew', 24.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Essential Crew</h3>
+                        <p class="product-desc">Boxy Fit</p>
+                        <div class="product-price">
+                            <span class="price">$24.99</span>
+                            <div class="colors">
+                                <span class="color-dot gray"></span>
+                                <span class="color-dot green"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Design Section -->
+    <section id="custom" class="custom-section">
+        <div class="container">
+            <div class="custom-wrapper">
+                <div class="custom-content">
+                    <span class="section-badge">Custom Zone</span>
+                    <h2 class="section-title">Design Your <br><span class="gradient-text">Own Tee</span></h2>
+                    <p class="custom-desc">
+                        Have an idea? We bring it to life. Upload your design, choose your colors, and we'll print it exactly how you want.
+                    </p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Premium Quality Printing</li>
+                        <li><i class="fa-solid fa-check"></i> All Over Print Available</li>
+                        <li><i class="fa-solid fa-check"></i> Fast Delivery</li>
+                    </ul>
+
+                    <a href="mailto:norivawear@gmail.com?subject=Custom%20T-Shirt%20Order" class="btn btn-primary">Start Designing</a>
+                </div>
+
+                <div class="custom-visual">
+                    <div class="tshirt-preview">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" alt="Custom Tee">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="insta-section">
+        <div class="container">
+            <div class="insta-header">
+                <a href="https://instagram.com/norivawear" target="_blank" class="insta-handle">
+                    <i class="fa-brands fa-instagram"></i> @norivawear
+                </a>
+                <p>Follow us for daily drops & style inspiration</p>
+            </div>
+            
+            <div class="insta-feed">
+                <div class="insta-post"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&auto=format&fit=crop" alt="Post"></div>
+                <div class="insta-post"><img src="https://images.unsplash.com/photo-1529139574466-a302c27e3844?w=400&auto=format&fit=crop" alt="Post"></div>
+                <div class="insta-post"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&auto=format&fit=crop" alt="Post"></div>
+                <div class="insta-post"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&auto=format&fit=crop" alt="Post"></div>
+                <div class="insta-post"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&auto=format&fit=crop" alt="Post"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Have questions? We'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>norivawear@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@norivawear</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <!-- <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <select name="subject">
+                        <option value="">Select Subject</option>
+                        <option value="order">Order Inquiry</option>
+                        <option value="custom">Custom Design</option>
+                        <option value="support">Customer Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-text">NORIVA</span><span class="logo-highlight">WEAR</span>
+                    </a>
+                    <p>Premium streetwear for the bold. Custom designs, premium quality, unapologetic style.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/norivawear" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/norivawear" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://tiktok.com/@norivawear" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <a href="#shop">New Arrivals</a>
+                    <a href="#shop">Best Sellers</a>
+                    <a href="#custom">Custom Design</a>
+                    <a href="#shop">Sale</a>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Help</h4>
+                    <a href="#contact">Shipping Info</a>
+                    <a href="#contact">Returns</a>
+                    <a href="#contact">Size Guide</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get early access to drops.</p>
+                    <!-- Change YOUR_NEWSLETTER_ID to your Formspree ID -->
+                    <form class="newsletter-form" action="https://formspree.io/f/YOUR_NEWSLETTER_ID" method="POST">
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Norivawear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Your bag is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout
